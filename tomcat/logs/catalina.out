@@ -1,0 +1,522 @@
+Nov 19, 2015 6:46:03 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Nov 19, 2015 6:46:03 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 6:46:03 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 664 ms
+Nov 19, 2015 6:46:03 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 19, 2015 6:46:03 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.1
+Nov 19, 2015 6:46:03 PM org.apache.catalina.core.StandardHost start
+INFO: XML validation disabled
+Nov 19, 2015 6:46:05 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 6:46:05 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 19, 2015 6:46:05 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/37  config=null
+Nov 19, 2015 6:46:05 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1273 ms
+Nov 19, 2015 6:49:00 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 6:49:01 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 19, 2015 6:49:01 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 6:49:01 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Failed shutdown of Apache Portable Runtime
+Nov 19, 2015 7:00:02 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Nov 19, 2015 7:00:02 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:00:02 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 565 ms
+Nov 19, 2015 7:00:02 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 19, 2015 7:00:02 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.1
+Nov 19, 2015 7:00:02 PM org.apache.catalina.core.StandardHost start
+INFO: XML validation disabled
+Nov 19, 2015 7:00:03 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:00:03 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 19, 2015 7:00:03 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/21  config=null
+Nov 19, 2015 7:00:03 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1342 ms
+java.sql.SQLException: Fail to convert to internal representation
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:112)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:146)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:208)
+	at oracle.jdbc.driver.CharCommonAccessor.getInt(CharCommonAccessor.java:132)
+	at oracle.jdbc.driver.OracleResultSetImpl.getInt(OracleResultSetImpl.java:521)
+	at dbController.DatabaseController.FindAllEmployees(DatabaseController.java:108)
+	at org.apache.jsp.searchprocess_jsp._jspService(searchprocess_jsp.java:83)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:98)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:390)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:320)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:266)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:228)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:212)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:818)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:624)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:445)
+	at java.lang.Thread.run(Thread.java:724)
+java.sql.SQLException: Fail to convert to internal representation
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:112)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:146)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:208)
+	at oracle.jdbc.driver.CharCommonAccessor.getInt(CharCommonAccessor.java:132)
+	at oracle.jdbc.driver.OracleResultSetImpl.getInt(OracleResultSetImpl.java:521)
+	at dbController.DatabaseController.FindAllEmployees(DatabaseController.java:108)
+	at org.apache.jsp.searchprocess_jsp._jspService(searchprocess_jsp.java:83)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:98)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:390)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:320)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:266)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:228)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:212)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:818)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:624)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:445)
+	at java.lang.Thread.run(Thread.java:724)
+java.sql.SQLException: Fail to convert to internal representation
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:112)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:146)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:208)
+	at oracle.jdbc.driver.CharCommonAccessor.getInt(CharCommonAccessor.java:132)
+	at oracle.jdbc.driver.OracleResultSetImpl.getInt(OracleResultSetImpl.java:521)
+	at dbController.DatabaseController.FindAllEmployees(DatabaseController.java:108)
+	at org.apache.jsp.searchprocess_jsp._jspService(searchprocess_jsp.java:83)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:98)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:390)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:320)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:266)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:228)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:212)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:818)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:624)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:445)
+	at java.lang.Thread.run(Thread.java:724)
+Nov 19, 2015 7:12:38 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:12:39 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 19, 2015 7:12:40 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:12:40 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Failed shutdown of Apache Portable Runtime
+Nov 19, 2015 7:12:46 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Nov 19, 2015 7:12:47 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:12:47 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 350 ms
+Nov 19, 2015 7:12:47 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 19, 2015 7:12:47 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.1
+Nov 19, 2015 7:12:47 PM org.apache.catalina.core.StandardHost start
+INFO: XML validation disabled
+Nov 19, 2015 7:12:47 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:12:47 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 19, 2015 7:12:47 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/18  config=null
+Nov 19, 2015 7:12:47 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 869 ms
+java.sql.SQLException: Fail to convert to internal representation
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:112)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:146)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:208)
+	at oracle.jdbc.driver.CharCommonAccessor.getInt(CharCommonAccessor.java:132)
+	at oracle.jdbc.driver.OracleResultSetImpl.getInt(OracleResultSetImpl.java:521)
+	at dbController.DatabaseController.FindAllEmployees(DatabaseController.java:108)
+	at org.apache.jsp.searchprocess_jsp._jspService(searchprocess_jsp.java:74)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:98)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:390)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:320)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:266)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:228)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:212)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:818)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:624)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:445)
+	at java.lang.Thread.run(Thread.java:724)
+java.sql.SQLException: Fail to convert to internal representation
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:112)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:146)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:208)
+	at oracle.jdbc.driver.CharCommonAccessor.getInt(CharCommonAccessor.java:132)
+	at oracle.jdbc.driver.OracleResultSetImpl.getInt(OracleResultSetImpl.java:521)
+	at dbController.DatabaseController.FindAllEmployees(DatabaseController.java:108)
+	at org.apache.jsp.searchprocess_jsp._jspService(searchprocess_jsp.java:84)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:98)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:390)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:320)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:266)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:228)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:212)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:818)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:624)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:445)
+	at java.lang.Thread.run(Thread.java:724)
+Nov 19, 2015 7:14:55 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:14:56 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 19, 2015 7:14:56 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:14:56 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Failed shutdown of Apache Portable Runtime
+Nov 19, 2015 7:14:56 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Nov 19, 2015 7:14:56 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:14:56 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 334 ms
+Nov 19, 2015 7:14:56 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 19, 2015 7:14:56 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.1
+Nov 19, 2015 7:14:56 PM org.apache.catalina.core.StandardHost start
+INFO: XML validation disabled
+Nov 19, 2015 7:14:57 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:14:57 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 19, 2015 7:14:57 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/19  config=null
+Nov 19, 2015 7:14:57 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 716 ms
+java.sql.SQLException: Fail to convert to internal representation
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:112)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:146)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:208)
+	at oracle.jdbc.driver.CharCommonAccessor.getInt(CharCommonAccessor.java:132)
+	at oracle.jdbc.driver.OracleResultSetImpl.getInt(OracleResultSetImpl.java:521)
+	at dbController.DatabaseController.FindAllEmployees(DatabaseController.java:108)
+	at org.apache.jsp.searchprocess_jsp._jspService(searchprocess_jsp.java:83)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:98)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:390)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:320)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:266)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:228)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:212)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:818)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:624)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:445)
+	at java.lang.Thread.run(Thread.java:724)
+Nov 19, 2015 7:21:02 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:21:03 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 19, 2015 7:21:03 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:21:03 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Failed shutdown of Apache Portable Runtime
+Nov 19, 2015 7:21:04 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Nov 19, 2015 7:21:04 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:21:04 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 347 ms
+Nov 19, 2015 7:21:04 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 19, 2015 7:21:04 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.1
+Nov 19, 2015 7:21:04 PM org.apache.catalina.core.StandardHost start
+INFO: XML validation disabled
+Nov 19, 2015 7:21:04 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:21:04 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 19, 2015 7:21:04 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/17  config=null
+Nov 19, 2015 7:21:04 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 715 ms
+Nov 19, 2015 7:21:59 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:22:00 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 19, 2015 7:22:00 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:22:00 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Failed shutdown of Apache Portable Runtime
+Nov 19, 2015 7:22:00 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Nov 19, 2015 7:22:00 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:22:00 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 337 ms
+Nov 19, 2015 7:22:00 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 19, 2015 7:22:00 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.1
+Nov 19, 2015 7:22:00 PM org.apache.catalina.core.StandardHost start
+INFO: XML validation disabled
+Nov 19, 2015 7:22:01 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:22:01 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 19, 2015 7:22:01 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/23  config=null
+Nov 19, 2015 7:22:01 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 699 ms
+Nov 19, 2015 7:25:56 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:25:57 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 19, 2015 7:25:57 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:25:57 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Failed shutdown of Apache Portable Runtime
+Nov 19, 2015 7:25:57 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Nov 19, 2015 7:25:57 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:25:57 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 399 ms
+Nov 19, 2015 7:25:57 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 19, 2015 7:25:57 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.1
+Nov 19, 2015 7:25:57 PM org.apache.catalina.core.StandardHost start
+INFO: XML validation disabled
+Nov 19, 2015 7:25:58 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:25:58 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 19, 2015 7:25:58 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/17  config=null
+Nov 19, 2015 7:25:58 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 645 ms
+Nov 19, 2015 7:29:20 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:29:21 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 19, 2015 7:29:21 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:29:21 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Failed shutdown of Apache Portable Runtime
+Nov 19, 2015 7:29:21 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Nov 19, 2015 7:29:21 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:29:21 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 339 ms
+Nov 19, 2015 7:29:21 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 19, 2015 7:29:21 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.1
+Nov 19, 2015 7:29:21 PM org.apache.catalina.core.StandardHost start
+INFO: XML validation disabled
+Nov 19, 2015 7:29:22 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:29:22 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 19, 2015 7:29:22 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/18  config=null
+Nov 19, 2015 7:29:22 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 724 ms
+Nov 19, 2015 7:38:26 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:38:27 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 19, 2015 7:38:27 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Nov 19, 2015 7:38:27 PM org.apache.coyote.http11.Http11Protocol init
+SEVERE: Error initializing endpoint
+java.net.BindException: Address already in use:27953
+	at org.apache.tomcat.util.net.JIoEndpoint.init(JIoEndpoint.java:499)
+	at org.apache.coyote.http11.Http11Protocol.init(Http11Protocol.java:175)
+	at org.apache.catalina.connector.Connector.initialize(Connector.java:1024)
+	at org.apache.catalina.core.StandardService.initialize(StandardService.java:581)
+	at org.apache.catalina.core.StandardServer.initialize(StandardServer.java:792)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:504)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:260)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:412)
+
+Nov 19, 2015 7:38:27 PM org.apache.catalina.startup.Catalina load
+SEVERE: Catalina.start
+LifecycleException:  Protocol handler initialization failed: java.net.BindException: Address already in use:27953
+	at org.apache.catalina.connector.Connector.initialize(Connector.java:1026)
+	at org.apache.catalina.core.StandardService.initialize(StandardService.java:581)
+	at org.apache.catalina.core.StandardServer.initialize(StandardServer.java:792)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:504)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:260)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:412)
+
+Nov 19, 2015 7:38:27 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 328 ms
+Nov 19, 2015 7:38:27 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 19, 2015 7:38:27 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.1
+Nov 19, 2015 7:38:27 PM org.apache.catalina.core.StandardHost start
+INFO: XML validation disabled
+Nov 19, 2015 7:38:27 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:38:27 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Failed shutdown of Apache Portable Runtime
+Nov 19, 2015 7:38:28 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:38:28 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 19, 2015 7:38:28 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/16  config=null
+Nov 19, 2015 7:38:28 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 687 ms
+Nov 19, 2015 7:44:38 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:44:39 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 19, 2015 7:44:39 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-27953
+Nov 19, 2015 7:44:39 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Failed shutdown of Apache Portable Runtime
+Apr 12, 2017 2:19:09 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Apr 12, 2017 2:19:09 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-20203
+Apr 12, 2017 2:19:09 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1145 ms
+Apr 12, 2017 2:19:09 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Apr 12, 2017 2:19:09 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.1
+Apr 12, 2017 2:19:09 AM org.apache.catalina.core.StandardHost start
+INFO: XML validation disabled
+Apr 12, 2017 2:19:11 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-20203
+Apr 12, 2017 2:19:11 AM org.apache.jk.common.ChannelSocket init
+INFO: Port busy 8009 java.net.BindException: Address already in use
+Apr 12, 2017 2:19:11 AM org.apache.jk.common.ChannelSocket init
+INFO: Port busy 8010 java.net.BindException: Address already in use
+Apr 12, 2017 2:19:11 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8011
+Apr 12, 2017 2:19:11 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=2 time=0/53  config=null
+Apr 12, 2017 2:19:11 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 2063 ms
+Nov 27, 2017 11:40:00 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Nov 27, 2017 11:40:00 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-26032
+Nov 27, 2017 11:40:00 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 679 ms
+Nov 27, 2017 11:40:00 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 27, 2017 11:40:00 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.1
+Nov 27, 2017 11:40:00 AM org.apache.catalina.core.StandardHost start
+INFO: XML validation disabled
+Nov 27, 2017 11:40:01 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-26032
+Nov 27, 2017 11:40:01 AM org.apache.jk.common.ChannelSocket init
+INFO: Port busy 8009 java.net.BindException: Address already in use
+Nov 27, 2017 11:40:01 AM org.apache.jk.common.ChannelSocket init
+INFO: Port busy 8010 java.net.BindException: Address already in use
+Nov 27, 2017 11:40:01 AM org.apache.jk.common.ChannelSocket init
+INFO: Port busy 8011 java.net.BindException: Address already in use
+Nov 27, 2017 11:40:01 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8012
+Nov 27, 2017 11:40:01 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=3 time=0/25  config=null
+Nov 27, 2017 11:40:01 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1258 ms
+Nov 27, 2017 11:47:49 AM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-26032
+Nov 27, 2017 11:47:50 AM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 27, 2017 11:47:50 AM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-26032
+Nov 27, 2017 11:47:50 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Failed shutdown of Apache Portable Runtime
+Nov 27, 2017 12:06:50 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Nov 27, 2017 12:06:50 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-26032
+Nov 27, 2017 12:06:50 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 321 ms
+Nov 27, 2017 12:06:50 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 27, 2017 12:06:50 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.1
+Nov 27, 2017 12:06:50 PM org.apache.catalina.core.StandardHost start
+INFO: XML validation disabled
+Nov 27, 2017 12:06:50 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-26032
+Nov 27, 2017 12:06:51 PM org.apache.jk.common.ChannelSocket init
+INFO: Port busy 8009 java.net.BindException: Address already in use
+Nov 27, 2017 12:06:51 PM org.apache.jk.common.ChannelSocket init
+INFO: Port busy 8010 java.net.BindException: Address already in use
+Nov 27, 2017 12:06:51 PM org.apache.jk.common.ChannelSocket init
+INFO: Port busy 8011 java.net.BindException: Address already in use
+Nov 27, 2017 12:06:51 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8012
+Nov 27, 2017 12:06:51 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=3 time=0/32  config=null
+Nov 27, 2017 12:06:51 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 894 ms

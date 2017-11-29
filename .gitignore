@@ -2,3 +2,5 @@
 .DS_Store
 ER-Diagram/*.docx
 ER-Diagram/*.tmp
+*/.DS_Store
+tomcat/webapps/ROOT/WEB-INF/classes/dbController/*.class
