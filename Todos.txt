@@ -1,0 +1,17 @@
+
+ToDos:
+
+1. Mod the table for update and delete action
+
+2. Make mock data for Part, Department relations
+
+3. Front-end design
+    3.a User interaction diagram
+    3.b Information pass to back-end
+    3.c Input validation
+
+4. Back-end
+    4.a Handle information exchange with front-end
+    4.b Handle communication with DB
+
+5. Create two more queries using input provided from user
