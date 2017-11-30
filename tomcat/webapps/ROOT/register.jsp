@@ -29,19 +29,22 @@
         <br>
 		LastName <input type ="text" id="name" name="lname">
         <br>
-		<button type="submit"> Register</button>
+		<button type="submit" value="submitBtn" name="submitBtn"> register</button>
 		<button type="button" onclick="window.location.href='login.jsp'">Back</button>
 		<p id="result"></p>
 		</form>
 	</div>
  	<%
+		if (request.getParameter("submitBtn") == null){
+			return;
+		}
+		
 		String userid = request.getParameter("userid");
 		String pwd = request.getParameter("password");
 		String fname = request.getParameter("fname");
 		String lname = request.getParameter("lname");
 	
 		int result = 0;
-	
 	
 		if(result == 0){
 			out.println("<script type=\"text/javascript\">");

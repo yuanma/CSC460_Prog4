@@ -24,17 +24,26 @@
 			<br>
 			Password <input type="password" id="password" name="password">
 			<br>
-			<button type="submit"> login</button>
+			<button type="submit" value="submitBtn" name="submitBtn"> login</button>
+			<br>
 			<button type="button" onclick="window.location.href='register.jsp'">Register</button>
+			<br>
 			<button type="button" onclick="window.location.href='managerPage.jsp'">Manager</button>
+			<br>
+			<button type="button" onclick="window.location.href='customerPage.jsp'">Customer</button>
 		</form>
 	</div>
 	<%
+		if (request.getParameter("submitBtn") == null){
+			return;
+		}
+		
 		String userid = request.getParameter("userid");
 		String pwd = request.getParameter("password");
 		session.setAttribute("userID",userid);
 		session.setAttribute("userType","1");
-		int userType = 4;
+		
+		int userType = 0;
 		
 		if(userType == 1){
 			response.sendRedirect("customerPage.jsp");
