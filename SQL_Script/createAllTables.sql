@@ -39,7 +39,6 @@ CREATE TABLE Order (
     orderNo         VARCHAR2(8) NOT NULL,
     contrNo         VARCHAR2(6) NOT NULL,
     deptName        VARCHAR2(20) NOT NULL,
-    progress        NUMBER(3, 2),
     PRIMARY KEY (orderNo),
     FOREIGN KEY (contrNo) REFERENCES Contract(contrNo)
     ON DELETE NO ACTION ON UPDATE CASCADE,
