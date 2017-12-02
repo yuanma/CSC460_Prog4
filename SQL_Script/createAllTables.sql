@@ -33,7 +33,7 @@ CREATE TABLE Contract (
     FOREIGN KEY (custNo) REFERENCES Customer(custNo)
 );
 
-CREATE TABLE Order (
+CREATE TABLE "Order" (
     orderNo         VARCHAR2(8) NOT NULL,
     contrNo         VARCHAR2(6) NOT NULL,
     deptName        VARCHAR2(20) NOT NULL,
