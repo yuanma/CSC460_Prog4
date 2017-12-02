@@ -40,7 +40,7 @@ CREATE TABLE "Order" (
     orderStatus     VARCHAR2(2),
     PRIMARY KEY (orderNo),
     FOREIGN KEY (contrNo) REFERENCES Contract(contrNo),
-    FOREIGN KEY (deptName) REFERENCES Department(deptName),
+    FOREIGN KEY (deptName) REFERENCES Department(deptName)
 );
 
 CREATE TABLE Build (
