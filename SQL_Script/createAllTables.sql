@@ -48,6 +48,6 @@ CREATE TABLE Build (
     partNo      VARCHAR2(6) NOT NULL,
     install     VARCHAR2(1),
     PRIMARY KEY (orderNo, partNo),
-    FOREIGN KEY (orderNo) REFERENCES Order(orderNo),
+    FOREIGN KEY (orderNo) REFERENCES "Order"(orderNo),
     FOREIGN KEY (partNo) REFERENCES part(partNo),
 );
