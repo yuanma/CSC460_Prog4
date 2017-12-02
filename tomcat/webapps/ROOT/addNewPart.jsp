@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Add New Department</title>
+		<title>Add New Part</title>
 		<style>
 			button {
 			    background-color: #4CAF50;
@@ -18,32 +18,36 @@
 		</style>
 	</head>
 	<body>
-	<div id="addNewDeptBox">
+	<div id="addNewPartBox">
 
 	<center>
-		<h2>Add New Department</h2>
-		<form action="addNewDept.jsp" method="post">
+		<h2>Add New Part</h2>
+		<form action="addNewPart.jsp" method="post">
 			<fieldset id = "field1">
 				<legend>Enter Information:</legend>				
-				<h3>Enter Department Name: 
-					<input type="text" name="deptName" value="" onkeypress="this.style.width = ((this.value.length + 2) * 8) + 'px';">
+				<h3>Enter Part Name: 
+					<input type="text" name="partName" value="" onkeypress="this.style.width = ((this.value.length + 2) * 8) + 'px';">
 				</h3>
+				<h3>Enter Part Price: 
+					<input type="text" name="partPrice" value="" onkeypress="this.style.width = ((this.value.length + 2) * 8) + 'px';">
+				</h3>				
 			</fieldset>
 			
 			<br>
 
-			<button type="submit" id="submitBtn" name="submitBtn"> Add The Department</button>
+			<button type="submit" id="submitBtn" name="submitBtn"> Add The Part</button>
 		</form>
 	</center>
 	</div>
-	
+		
 	
 	<%
 	if (request.getParameter("submitBtn") == null){
 		return;
 	}
 	
-	String deptName = request.getParameter("deptName");
+	String partName = request.getParameter("partName");
+	String partPrice = request.getParameter("partPrice");
 	
 	%>
 	

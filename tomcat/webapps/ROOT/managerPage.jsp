@@ -30,7 +30,7 @@
 				<br>
 				<input type="radio" name="myRadio" value="addPart"/> Add New Part
 				<br>
-				<input type="radio" name="myRadio" value="updateItemCost"/> Update Part Cost
+				<input type="radio" name="myRadio" value="updatePartCost"/> Update Part Cost
 				<br>
 			</fieldset>
 			
@@ -70,33 +70,28 @@
 			}
 			else if(selection.equals("addDept")){
 				out.println("<script type=\"text/javascript\">");
-
 				out.println("window.open('addNewDept.jsp');");
 				out.println("</script>");
 
 			}
 			else if(selection.equals("addPart")){
 				out.println("<script type=\"text/javascript\">");
-				out.println("alert('Add Part Selected');");
-				out.println("location='managerPage.jsp';");
+				out.println("window.open('addNewPart.jsp');");
 				out.println("</script>");
 			}
-			else if(selection.equals("updateItemCost")){
+			else if(selection.equals("updatePartCost")){
 				out.println("<script type=\"text/javascript\">");
-				out.println("alert('Update Item Cost Selected');");
-				out.println("location='managerPage.jsp';");
+				out.println("window.open('updatePartCost.jsp');");
 				out.println("</script>");
 			}
 			else if(selection.equals("updateProgress")){
 				out.println("<script type=\"text/javascript\">");
-				out.println("alert('Update Progress Selected');");
-				out.println("location='managerPage.jsp';");
+				out.println("window.open('updateProgress.jsp');");
 				out.println("</script>");
 			}
 			else if(selection.equals("scrapShip")){
 				out.println("<script type=\"text/javascript\">");
-				out.println("alert('Scrap Ship Selected');");
-				out.println("location='managerPage.jsp';");
+				out.println("window.open('scrapShip.jsp');");
 				out.println("</script>");
 			}
 		}
