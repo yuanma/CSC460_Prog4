@@ -49,5 +49,5 @@ CREATE TABLE Build (
     install     VARCHAR2(1),
     PRIMARY KEY (orderNo, partNo),
     FOREIGN KEY (orderNo) REFERENCES "Order"(orderNo),
-    FOREIGN KEY (partNo) REFERENCES part(partNo),
+    FOREIGN KEY (partNo) REFERENCES part(partNo)
 );
