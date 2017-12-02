@@ -49,7 +49,7 @@
 		if(result == 0){
 			out.println("<script type=\"text/javascript\">");
 			out.println("alert('registeration complete');");
-			out.println("location='login.jsp';");
+			out.println("location='register.jsp';");
 			out.println("</script>");
 		}
 		else if (result == 1){

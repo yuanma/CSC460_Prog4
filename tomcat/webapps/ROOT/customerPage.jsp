@@ -35,6 +35,7 @@
 			Please Choose One Action From Above:
 			<br>
 			<button type="submit" value="submitBtn" name="submitBtn"> submit</button>
+			<button type="button" onclick="window.location.href='login.jsp'">Back</button>
 		</form>
 	</center>
 	</div>

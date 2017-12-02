@@ -47,6 +47,7 @@
 			Please Choose One Action From Above:
 			<br>
 			<button type="submit" value="submitBtn" name="submitBtn"> submit</button>
+			<button type="button" onclick="window.location.href='login.jsp'">Back</button>
 		</form>
 	</center>
 	</div>
@@ -64,14 +65,13 @@
 			}
 			else if(selection.equals("addShip")){
 				out.println("<script type=\"text/javascript\">");
-				out.println("alert('Add Ship Selected');");
-				out.println("location='managerPage.jsp';");
+				out.println("window.open('addNewShip.jsp');");
 				out.println("</script>");
 			}
 			else if(selection.equals("addDept")){
 				out.println("<script type=\"text/javascript\">");
-				out.println("alert('Add Department Selected');");
-				out.println("location='managerPage.jsp';");
+
+				out.println("window.open('addNewDept.jsp');");
 				out.println("</script>");
 
 			}
