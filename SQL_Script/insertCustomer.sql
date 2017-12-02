@@ -11,7 +11,7 @@ INSERT INTO Customer VALUES ('CT0010', 'Miles', 'Binks', 'MilesBinks@pinwheel.co
 INSERT INTO Customer VALUES ('CT0011', 'David', 'Chewbacca', 'DavidChewbacca@sombrero.com');
 INSERT INTO Customer VALUES ('CT0012', 'Wesley', 'Sulu', 'WesleySulu@star.com');
 INSERT INTO Customer VALUES ('CT0013', 'Miles', 'Skywalker', 'MilesSkywalker@sombrero.com');
-INSERT INTO Customer VALUES ('CT0014', 'Obi-Wan', 'O'Brien', 'Obi-WanO'Brien@galaxy.com');
+INSERT INTO Customer VALUES ('CT0014', 'Obi-Wan', 'O''Brien', 'Obi-WanO''Brien@galaxy.com');
 INSERT INTO Customer VALUES ('CT0015', 'David', 'Vader', 'DavidVader@sombrero.com');
 INSERT INTO Customer VALUES ('CT0016', 'Wesley', 'Data', 'WesleyData@star.com');
 INSERT INTO Customer VALUES ('CT0017', 'David', 'Kirk', 'DavidKirk@galaxy.com');
