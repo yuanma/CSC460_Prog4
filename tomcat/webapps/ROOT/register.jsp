@@ -1,21 +1,20 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<%@page import="java.util.*, dbController.DatabaseController"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Register</title>
 </head>
 <style>
-#loginbox {
-	border: 2px solid black;
-	border-radius: 5px;
-	text-align: center;
-	padding: 20px;
+	#loginbox {
+		border: 2px solid black;
+		border-radius: 5px;
+		text-align: center;
+		padding: 20px;
         height: 200px;
-	width: 400px;
-	position:relative;
-	left:35%;
-}
+		width: 400px;
+		position:relative;
+		left:35%;
+	}
 </style>
 <body>
 	
@@ -30,44 +29,44 @@
         <br>
 		LastName <input type ="text" id="name" name="lname">
         <br>
-		<button type="submit"> Register</button>
+		<button type="submit" value="submitBtn" name="submitBtn"> register</button>
 		<button type="button" onclick="window.location.href='login.jsp'">Back</button>
 		<p id="result"></p>
 		</form>
 	</div>
-	<%
-	String userid = request.getParameter("userid");
-	String pwd = request.getParameter("password");
-	String fname = request.getParameter("fname");
-	String lname = request.getParameter("lname");
+ 	<%
+		if (request.getParameter("submitBtn") == null){
+			return;
+		}
+		
+		String userid = request.getParameter("userid");
+		String pwd = request.getParameter("password");
+		String fname = request.getParameter("fname");
+		String lname = request.getParameter("lname");
 	
-	DatabaseController dbc = new DatabaseController();
-	dbc.connect();
-	int result = dbc.addNewAccount(userid, fname, lname, pwd, 1);
+		int result = 0;
 	
-	
-	if(result == 0){
-		out.println("<script type=\"text/javascript\">");
-   		out.println("alert('registeration complete');");
-   		out.println("location='login.jsp';");
-   		out.println("</script>");
-	}
-	else if (result == 1){
-		out.println("<script type=\"text/javascript\">");
-   		out.println("alert('this userid has already been used');");
-   		out.println("location='register.jsp';");
-   		out.println("</script>");
+		if(result == 0){
+			out.println("<script type=\"text/javascript\">");
+			out.println("alert('registeration complete');");
+			out.println("location='register.jsp';");
+			out.println("</script>");
+		}
+		else if (result == 1){
+			out.println("<script type=\"text/javascript\">");
+			out.println("alert('this userid has already been used');");
+			out.println("location='register.jsp';");
+			out.println("</script>");
 
-	}
-	else if (result == 2){
-		out.println("<script type=\"text/javascript\">");
-   		out.println("alert('one of the information is not valid');");
-   		out.println("location='register.jsp';");
-   		out.println("</script>");
+		}
+		else if (result == 2){
+			out.println("<script type=\"text/javascript\">");
+			out.println("alert('one of the information is not valid');");
+			out.println("location='register.jsp';");
+			out.println("</script>");
 
-	}
-	out.write(result+"");
-	dbc.disconnect();
+		}
+		out.write(result+"");
 	%>
 </body>
 </html>
