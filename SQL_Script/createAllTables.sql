@@ -31,7 +31,6 @@ CREATE TABLE Contract (
     custNo       VARCHAR2(6) NOT NULL,
     PRIMARY KEY (contrNo),
     FOREIGN KEY (custNo) REFERENCES Customer(custNo)
-    ON DELETE NO ACTION
 );
 
 CREATE TABLE Order (
