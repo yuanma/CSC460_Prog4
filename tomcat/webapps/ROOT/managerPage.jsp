@@ -26,8 +26,6 @@
 				<legend>Update Database:</legend>
 				<input type="radio" name="myRadio" value="addShip"/> Add New Ship
 				<br>
-				<input type="radio" name="myRadio" value="addDept"/> Add New Dept
-				<br>
 				<input type="radio" name="myRadio" value="addPart"/> Add New Part
 				<br>
 				<input type="radio" name="myRadio" value="updatePartCost"/> Update Part Cost
@@ -67,12 +65,6 @@
 				out.println("<script type=\"text/javascript\">");
 				out.println("window.open('addNewShip.jsp');");
 				out.println("</script>");
-			}
-			else if(selection.equals("addDept")){
-				out.println("<script type=\"text/javascript\">");
-				out.println("window.open('addNewDept.jsp');");
-				out.println("</script>");
-
 			}
 			else if(selection.equals("addPart")){
 				out.println("<script type=\"text/javascript\">");

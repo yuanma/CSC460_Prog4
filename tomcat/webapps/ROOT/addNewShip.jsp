@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<%@page import="java.util.*, java.util.ArrayList, dbController.DBController, dbController.partRecord, dbController.deptRecord;"%>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -21,6 +21,7 @@
 				border:solid grey 1px; 
 				overflow-x: hidden;
 				position: absolute;
+				min-width:50px; 
 			}
 			.receiptPopUp {
 				display: none;
@@ -53,26 +54,10 @@
 		<h2>Add New Ship</h2>
 		<form action="addNewShip.jsp" method="post">
 			<fieldset id = "field1">
-				<legend>Enter Information:</legend>
-				<h3>Choose Department (Only List The Departments Those Do Not Have A Related Ship):
-					  <select class="bloc" name="departmentSelect" id="departmentSelect" 
-						      onfocus='this.size=5;' onblur='this.size=1;' 
-						      onchange='this.size=1; this.blur();'>
-						<%
-							request.setCharacterEncoding("utf-8");
-							response.setContentType("text/html;charset=utf-8");
-							out.write("<option value=\"2010\" >2010</option>");
-							out.write("<option value=\"2011\" >2011</option>");
-							out.write("<option value=\"2012\" >2012</option>");
-							out.write("<option value=\"2013\" >2013</option>");
-							out.write("<option value=\"2014\" >2014</option>");							
-							out.write("<option value=\"2015\" >2015</option>");
-							out.write("<option value=\"2016\" >2016</option>");		
-							out.write("<option value=\"2017\" >2017</option>");	
-						%>
-					   </select>			
+				<legend>Enter Information:</legend>				
+				<h3>Enter Department Name: 
+					<input type="text" name="deptName" id="deptName" value="" onkeypress="this.style.width = ((this.value.length + 2) * 8) + 'px';">
 				</h3>
-				
 				<br>
 				
 				<h3>Choose Part(s) (Press Ctrl To Make Multiple Selection):				
@@ -83,14 +68,24 @@
 						<%
 							request.setCharacterEncoding("utf-8");
 							response.setContentType("text/html;charset=utf-8");
-							out.write("<option value=\"A\" >A</option>");
-							out.write("<option value=\"B\" >B</option>");
-							out.write("<option value=\"C\" >C</option>");
-							out.write("<option value=\"D\" >D</option>");
-							out.write("<option value=\"E\" >E</option>");							
-							out.write("<option value=\"F\" >F</option>");
-							out.write("<option value=\"G\" >G</option>");		
-							out.write("<option value=\"H\" >H</option>");	
+							
+
+							DBController dbc = new DBController();
+							dbc.connect();
+							
+							ArrayList<partRecord> partList = dbc.show_all_part();
+														
+							if (partList != null && partList.size() > 0) {
+								for (int i = 0; i < partList.size(); i++) {
+									String part_name = partList.get(i).get_partName();
+
+									if (!part_name.equals("Hull") && !part_name.equals("Wing") && !part_name.equals("Engine")) {
+										out.write("<option value=" + part_name + " >" + part_name + "</option>");	
+									}
+								}
+							}							
+
+							dbc.disconnect();
 						%>
 					   </select>					
 				</h3>
@@ -103,7 +98,6 @@
 			</fieldset>
 			
 			
-			Please Choose One Action From Above:
 			<br>
 			<button type="button" id="viewBtn" name="viewBtn"> View The Receipt</button>
 			&nbsp;
@@ -133,8 +127,9 @@
 		var paragraph = document.getElementById("shipReceiptContent");
 		
 		// Print out the Department Name
-		var deptSelect = document.getElementById("departmentSelect");
-		var deptName = deptSelect.options[deptSelect.selectedIndex].text;
+		//var deptSelect = document.getElementById("departmentSelect");
+		//var deptName = deptSelect.options[deptSelect.selectedIndex].text;
+		var deptName = document.getElementById("deptName").value;
 		var deptText = "<p>Department Name:   " + deptName + "</p>"
 		
 		paragraph.innerHTML += deptText;	
@@ -146,9 +141,9 @@
 		
 		var partsText = "<p>Parts List:<br><ul>";
 		var i;
-		partsText += "<li>" + "HULL" + "</li>";
-		partsText += "<li>" + "WING" + "</li>";
-		partsText += "<li>" + "ENGINE" + "</li>";
+		partsText += "<li>" + "Hull" + "</li>";
+		partsText += "<li>" + "Wing" + "</li>";
+		partsText += "<li>" + "Engine" + "</li>";
 		for (i = 0; i < partsArrLength;i++) {
 			partsText += "<li>" + partsArr[i] + "</li>";
 		}
@@ -192,16 +187,36 @@
 	
 	</script>	
 	
+
 	<%
 	if (request.getParameter("submitBtn") == null){
 		return;
 	}
 	
-	String deptName = request.getParameter("departmentSelect");
+	//DBController dbc = new DBController();
+  	dbc.connect();
+	
+	
+	String deptName = request.getParameter("deptName");		
+
+	// Check If the deptName is already in the database
+	int rtn = dbc.verify_department(deptName);
+	if(rtn == 1){
+		out.println("<script type=\"text/javascript\">");
+		out.println("alert('The Department is Already Exist');");
+		out.println("location='addNewShip.jsp';");
+		out.println("</script>");
+		dbc.disconnect();
+		return;
+	}
+	dbc.disconnect();
+	
 	String[] partArr = request.getParameterValues("partsSelect");
 	String shipName = request.getParameter("shipName");	
 	
 	%>
+
+	
 	
 	</body>
 	

@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<%@page import="java.util.*, java.util.ArrayList, dbController.DBController, dbController.partRecord, dbController.deptRecord;"%>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -39,15 +39,21 @@
 						<%
 							request.setCharacterEncoding("utf-8");
 							response.setContentType("text/html;charset=utf-8");
-							out.write("<option value=\"\" ></option>");
-							out.write("<option value=\"2010\" >2010</option>");
-							out.write("<option value=\"2011\" >2011</option>");
-							out.write("<option value=\"2012\" >2012</option>");
-							out.write("<option value=\"2013\" >2013</option>");
-							out.write("<option value=\"2014\" >2014</option>");							
-							out.write("<option value=\"2015\" >2015</option>");
-							out.write("<option value=\"2016\" >2016</option>");		
-							out.write("<option value=\"2017\" >2017</option>");	
+							
+
+							DBController dbc = new DBController();
+							dbc.connect();
+							
+							ArrayList<partRecord> partList = dbc.show_all_part();
+														
+							if (partList != null && partList.size() > 0) {
+								for (int i = 0; i < partList.size(); i++) {
+									String part_name = partList.get(i).get_partName();
+									out.write("<option value=" + part_name + " >" + part_name + "</option>");	
+								}
+							}							
+
+							dbc.disconnect();
 						%>
 					   </select>			
 				</h3>
@@ -77,7 +83,7 @@
 	request.setCharacterEncoding("utf-8");
 	response.setContentType("text/html;charset=utf-8");
 	out.println("<script type=\"text/javascript\">");
-	out.println("alert('" + partName + "');");
+	out.println("alert('PartName: " + partName + "\\nPrice Change From: " + "');");
 	out.println("location='updatePartCost.jsp';");
 	out.println("</script>");
 	%>

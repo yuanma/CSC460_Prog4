@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<%@page import="java.util.*, java.util.ArrayList, dbController.DBController, dbController.partRecord, dbController.deptRecord;"%>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -32,20 +32,11 @@
 			
 			<br>
 			
-			<fieldset id = "field2">
+			<fieldset id="field2">
 				<legend>Part List:</legend>				
 								
-				Set The Installation Condition: 
 					<%
-						request.setCharacterEncoding("utf-8");
-						response.setContentType("text/html;charset=utf-8");
-						out.println("<script type=\"text/javascript\">");
-						out.println("var paragraph = document.getElementById(\"field2\");");
-						out.println("paragraph.innerHTML += \"<input type=\"radio\" name=\"1\" value=\"PartA\"/> PartA\"");
-						out.println("paragraph.innerHTML += \"<input type=\"radio\" name=\"1\" value=\"PartA\"/> PartA\"");
-						out.println("paragraph.innerHTML += \"<input type=\"radio\" name=\"1\" value=\"PartA\"/> PartA\"");
-						out.println("paragraph.innerHTML += \"<input type=\"radio\" name=\"1\" value=\"PartA\"/> PartA\"");						
-						out.println("</script>");
+						out.write("<input type=\"radio\" name=\"myRadio\" value=\"addShip\"/> Add New Ship");
 					%>
 	
 			</fieldset>
