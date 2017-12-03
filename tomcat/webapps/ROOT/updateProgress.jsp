@@ -23,10 +23,17 @@
 		<h2>Update Order Progress</h2>
 		<form action="updateProgress.jsp" method="post">
 			<fieldset id = "field1">
-				<legend>Enter Information:</legend>				
+				<legend>Update Building Progress:</legend>				
 								
-				<h3>Enter The Order Number: 
-					<input type="text" name="orderID" value="" onkeypress="this.style.width = ((this.value.length + 2) * 8) + 'px';">
+				<h3>Updating Order Number:  
+				<%
+					request.setCharacterEncoding("utf-8");
+					response.setContentType("text/html;charset=utf-8");
+					
+					String orderID = session.getAttribute("orderIDforUpdate").toString();		
+					out.write(orderID);
+					
+				%>
 				</h3>	
 			</fieldset>
 			
@@ -36,12 +43,18 @@
 				<legend>Part List:</legend>				
 								
 					<%
-						out.write("<input type=\"radio\" name=\"myRadio\" value=\"addShip\"/> Add New Ship");
+						request.setCharacterEncoding("utf-8");
+						response.setContentType("text/html;charset=utf-8");
+						
+						DBController dbc = new DBController();
+						dbc.connect();
+						
+						
 					%>
 	
 			</fieldset>
 
-			<button type="submit" id="submitBtn" name="submitBtn"> Scrap The Ship</button>
+			<button type="submit" id="submitBtn" name="submitBtn"> Comfirm Update</button>
 		</form>
 	</center>
 	</div>
@@ -52,14 +65,6 @@
 		return;
 	}
 	
-	String orderID = request.getParameter("orderID");
-	
-	request.setCharacterEncoding("utf-8");
-	response.setContentType("text/html;charset=utf-8");
-	out.println("<script type=\"text/javascript\">");
-	out.println("alert('" + orderID + "');");
-	out.println("location='updateProgress.jsp';");
-	out.println("</script>");
 	%>
 	
 	</body>

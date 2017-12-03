@@ -102,5 +102,23 @@ public class DBController {
 		}
 		return null;		
 	}
+	
+	// List all the parts available in Part Table
+	public ArrayList<orderRecord> show_all_order() {
+		ArrayList<orderRecord> order_list = new ArrayList<orderRecord>();
+		String listAllOrderQueryStr = "SELECT * From yuanma.ContractOrder";
+		try {
+			ResultSet rs = stmt.executeQuery(listAllOrderQueryStr);
+			while(rs.next()){
+				order_list.add(new orderRecord(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4)));
+			}
+			rs.close();
+			return order_list;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;		
+	}
 }
 	

@@ -36,9 +36,7 @@
 			
 			<fieldset id = "field2">
 				<legend>Update Progress:</legend>
-				<input type="radio" name="myRadio" value="updateProgress"/> Update Ship Building Progress
-				<br>
-				<input type="radio" name="myRadio" value="scrapShip"/> Scrap Ship or Cancel Order
+				<input type="radio" name="myRadio" value="updateShipStatus"/> Update Ship Building Progress or Scrap Ship
 				<br>
 			</fieldset>
 			
@@ -76,14 +74,9 @@
 				out.println("window.open('updatePartCost.jsp');");
 				out.println("</script>");
 			}
-			else if(selection.equals("updateProgress")){
+			else if(selection.equals("updateShipStatus")){
 				out.println("<script type=\"text/javascript\">");
-				out.println("window.open('updateProgress.jsp');");
-				out.println("</script>");
-			}
-			else if(selection.equals("scrapShip")){
-				out.println("<script type=\"text/javascript\">");
-				out.println("window.open('scrapShip.jsp');");
+				out.println("window.open('updateShipStatus.jsp');");
 				out.println("</script>");
 			}
 		}
